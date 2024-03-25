@@ -62,6 +62,7 @@ if [[ ! "${CI_DIR}" =~ .*/tools/ci[/]{0,1}$ ]]; then
   exit 1
 fi
 MAVEN_WRAPPER="${CI_DIR}/../../mvnw"
+chmod 777 $MAVEN_WRAPPER
 
 export MAVEN_WRAPPER
 
