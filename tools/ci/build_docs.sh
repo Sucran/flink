@@ -17,22 +17,13 @@
 # limitations under the License.
 ################################################################################
 
-HUGO_REPO=https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.tar.gz
-HUGO_ARTIFACT=hugo_extended_0.80.0_Linux-64bit.tar.gz
+#
+# This script is the CI entrypoint for compiling Flink and running QA checks that don't require tests.
+#
 
-if ! curl --fail -OL $HUGO_REPO ; then 
-	echo "Failed to download Hugo binary"
-	exit 1
-fi
+CI_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+source "${CI_DIR}/maven-utils.sh"
 
-tar -zxvf $HUGO_ARTIFACT
+MVN=run_mvn "${CI_DIR}/compile.sh"
 
-git submodule update --init --recursive
-# generate docs into docs/target
-./hugo -v --source docs --destination target
-
-if [ $? -ne 0 ]; then
-	echo "Error building the docs"
-	exit 1
-fi
-
+exit $?
