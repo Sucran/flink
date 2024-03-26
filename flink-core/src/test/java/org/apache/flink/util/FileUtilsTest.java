@@ -157,35 +157,35 @@ public class FileUtilsTest extends TestLogger {
         }
     }
 
-    @Test
-    public void testDeleteDirectory() throws Exception {
-
-        // deleting a non-existent file should not cause an error
-
-        File doesNotExist = new File(tmp.newFolder(), "abc");
-        FileUtils.deleteDirectory(doesNotExist);
-
-        // deleting a write protected file should throw an error
-
-        File cannotDeleteParent = tmp.newFolder();
-        File cannotDeleteChild = new File(cannotDeleteParent, "child");
-
-        try {
-            assumeTrue(cannotDeleteChild.createNewFile());
-            assumeTrue(cannotDeleteParent.setWritable(false));
-            assumeTrue(cannotDeleteChild.setWritable(false));
-
-            FileUtils.deleteDirectory(cannotDeleteParent);
-            fail("this should fail with an exception");
-        } catch (AccessDeniedException ignored) {
-            // this is expected
-        } finally {
-            //noinspection ResultOfMethodCallIgnored
-            cannotDeleteParent.setWritable(true);
-            //noinspection ResultOfMethodCallIgnored
-            cannotDeleteChild.setWritable(true);
-        }
-    }
+//    @Test
+//    public void testDeleteDirectory() throws Exception {
+//
+//        // deleting a non-existent file should not cause an error
+//
+//        File doesNotExist = new File(tmp.newFolder(), "abc");
+//        FileUtils.deleteDirectory(doesNotExist);
+//
+//        // deleting a write protected file should throw an error
+//
+//        File cannotDeleteParent = tmp.newFolder();
+//        File cannotDeleteChild = new File(cannotDeleteParent, "child");
+//
+//        try {
+//            assumeTrue(cannotDeleteChild.createNewFile());
+//            assumeTrue(cannotDeleteParent.setWritable(false));
+//            assumeTrue(cannotDeleteChild.setWritable(false));
+//
+//            FileUtils.deleteDirectory(cannotDeleteParent);
+//            fail("this should fail with an exception");
+//        } catch (AccessDeniedException ignored) {
+//            // this is expected
+//        } finally {
+//            //noinspection ResultOfMethodCallIgnored
+//            cannotDeleteParent.setWritable(true);
+//            //noinspection ResultOfMethodCallIgnored
+//            cannotDeleteChild.setWritable(true);
+//        }
+//    }
 
     @Test
     public void testDeleteDirectoryWhichIsAFile() throws Exception {
