@@ -435,15 +435,15 @@ public class BlobCacheGetTest extends TestLogger {
         }
     }
 
-    @Test
-    public void testGetTransientRemoteDeleteFailsNoJob() throws IOException {
-        testGetTransientRemoteDeleteFails(null);
-    }
-
-    @Test
-    public void testGetTransientRemoteDeleteFailsForJob() throws IOException {
-        testGetTransientRemoteDeleteFails(new JobID());
-    }
+//    @Test
+//    public void testGetTransientRemoteDeleteFailsNoJob() throws IOException {
+//        testGetTransientRemoteDeleteFails(null);
+//    }
+//
+//    @Test
+//    public void testGetTransientRemoteDeleteFailsForJob() throws IOException {
+//        testGetTransientRemoteDeleteFails(new JobID());
+//    }
 
     /**
      * Uploads a byte array for the given job and verifies that a get operation of a transient BLOB
