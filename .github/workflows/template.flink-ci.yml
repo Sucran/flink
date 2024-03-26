@@ -166,7 +166,7 @@ jobs:
       - name: "Test"
         working-directory: ${{ env.CONTAINER_LOCAL_WORKING_DIR }}
         run: |
-          ${{ inputs.environment }} ./tools/ci/compile_ci.sh || exit $?
+          chmod 777 ./tools/ci/compile_ci.sh || ${{ inputs.environment }} ./tools/ci/compile_ci.sh || exit $?
 
   test:
     name: "Test (module: ${{ matrix.module }})"
