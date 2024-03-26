@@ -119,6 +119,15 @@ jobs:
         run: |
           ./tools/azure-pipelines/create_build_artifact.sh
 
+      - name: "Upload artifacts to make them available in downstream jobs"
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts-${{ steps.workflow-prep-step.outputs.stringified-workflow-name }}-${{ github.run_number }}
+          path: ${{ env.FLINK_ARTIFACT_DIR }}/${{ env.FLINK_ARTIFACT_FILENAME }}
+          if-no-files-found: error
+          # use minimum here because we only need these artifacts to speed up the build
+          retention-days: 1
+
   packaging:
     name: "Test packaging/licensing"
     needs: compile
