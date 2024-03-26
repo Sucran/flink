@@ -66,7 +66,7 @@ chmod 777 $MAVEN_WRAPPER
 
 export MAVEN_WRAPPER
 
-MAVEN_MIRROR_CONFIG_FILE=""
+MAVEN_MIRROR_CONFIG_FILE="$CI_DIR/alibaba-mirror-settings.xml"
 NPM_PROXY_PROFILE_ACTIVATION=""
 set_mirror_config
 
