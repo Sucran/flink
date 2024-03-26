@@ -67,8 +67,8 @@ chmod 777 $MAVEN_WRAPPER
 export MAVEN_WRAPPER
 
 MAVEN_MIRROR_CONFIG_FILE="$CI_DIR/alibaba-mirror-settings.xml"
-NPM_PROXY_PROFILE_ACTIVATION="-Duse-alibaba-mirror"
-#set_mirror_config
+NPM_PROXY_PROFILE_ACTIVATION=""
+set_mirror_config
 
 export MVN_GLOBAL_OPTIONS_WITHOUT_MIRROR="$MAVEN_ARGS "
 # see https://developercommunity.visualstudio.com/content/problem/851041/microsoft-hosted-agents-run-into-maven-central-tim.html
