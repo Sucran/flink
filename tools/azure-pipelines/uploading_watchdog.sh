@@ -26,7 +26,7 @@ HERE="`( cd \"$HERE\" && pwd )`"    # absolutized and normalized
 if [ -z "$HERE" ] ; then
   exit 1
 fi
-
+AGENT_TEMPDIRECTORY=/tmp
 if [ -n "${TF_BUILD+x}" ]; then
   echo "[INFO] Azure Pipelines environment detected: $0 will rely on Azure-specific environment variables."
   job_name="$AGENT_JOBNAME"
