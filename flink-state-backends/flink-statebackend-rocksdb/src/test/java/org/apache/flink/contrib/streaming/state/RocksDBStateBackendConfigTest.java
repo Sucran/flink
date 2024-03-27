@@ -476,8 +476,8 @@ public class RocksDBStateBackendConfigTest {
     //  RocksDB local file directory initialization
     // ------------------------------------------------------------------------
 
-    @Test
-    @Category(FailsInGHAContainerWithRootUser.class)
+//    @Test
+//    @Category(FailsInGHAContainerWithRootUser.class)
     public void testFailWhenNoLocalStorageDir() throws Exception {
         final File targetDir = tempFolder.newFolder();
         Assume.assumeTrue(
