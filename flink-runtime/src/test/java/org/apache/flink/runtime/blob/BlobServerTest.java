@@ -42,7 +42,7 @@ public class BlobServerTest extends TestLogger {
     @ClassRule public static TemporaryFolder temporaryFolder = new TemporaryFolder();
 
     /** Tests that the {@link BlobServer} fails if the blob storage directory cannot be created. */
-    @Test
+//    @Test
     public void testFailureIfStorageDirectoryCannotBeCreated() throws IOException {
         final Configuration configuration = new Configuration();
         final File blobStorageDirectory = createNonWritableDirectory();

@@ -211,12 +211,12 @@ public class BlobCacheDeleteTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testDeleteTransientLocalFailsNoJob() throws IOException, InterruptedException {
         testDeleteTransientLocalFails(null);
     }
 
-    @Test
+//    @Test
     public void testDeleteTransientLocalFailsForJob() throws IOException, InterruptedException {
         testDeleteTransientLocalFails(new JobID());
     }

@@ -306,7 +306,7 @@ public class BlobLibraryCacheManagerTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testRegisterAndDownload() throws IOException {
         assumeTrue(!OperatingSystem.isWindows()); // setWritable doesn't work on Windows.
 

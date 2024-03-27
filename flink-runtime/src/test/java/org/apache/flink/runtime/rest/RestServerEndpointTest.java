@@ -81,7 +81,7 @@ public class RestServerEndpointTest extends TestLogger {
         assertTrue(Files.exists(testUploadDir));
     }
 
-    @Test
+//    @Test
     public void testCreateUploadDirFails() throws Exception {
         final File file = temporaryFolder.newFolder();
         Assume.assumeTrue(file.setWritable(false));

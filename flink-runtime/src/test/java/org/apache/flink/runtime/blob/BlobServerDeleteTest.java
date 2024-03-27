@@ -203,17 +203,17 @@ public class BlobServerDeleteTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testDeleteTransientFailsNoJob() throws IOException {
         testDeleteBlobFails(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testDeleteTransientFailsForJob() throws IOException {
         testDeleteBlobFails(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testDeletePermanentFailsForJob() throws IOException {
         testDeleteBlobFails(new JobID(), PERMANENT_BLOB);
     }

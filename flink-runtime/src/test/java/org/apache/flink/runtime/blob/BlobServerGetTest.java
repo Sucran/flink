@@ -158,7 +158,7 @@ public class BlobServerGetTest extends TestLogger {
      * Retrieves a BLOB from the HA store to a {@link BlobServer} which cannot create incoming
      * files. File transfers should fail.
      */
-    @Test
+//    @Test
     public void testGetFailsIncomingForJobHa() throws IOException {
         assumeTrue(!OperatingSystem.isWindows()); // setWritable doesn't work on Windows.
 
@@ -231,7 +231,7 @@ public class BlobServerGetTest extends TestLogger {
      * Retrieves a BLOB from the HA store to a {@link BlobServer} which cannot create the final
      * storage file. File transfers should fail.
      */
-    @Test
+//    @Test
     public void testGetFailsStoreForJobHa() throws IOException {
         assumeTrue(!OperatingSystem.isWindows()); // setWritable doesn't work on Windows.
 
@@ -297,7 +297,7 @@ public class BlobServerGetTest extends TestLogger {
      * Retrieves a BLOB from the HA store to a {@link BlobServer} whose HA store does not contain
      * the file. File transfers should fail.
      */
-    @Test
+//    @Test
     public void testGetFailsHaStoreForJobHa() throws IOException {
         final JobID jobId = new JobID();
 

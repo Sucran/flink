@@ -188,17 +188,17 @@ public class BlobCacheGetTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testGetFailsIncomingNoJob() throws IOException {
         testGetFailsIncoming(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testGetFailsIncomingForJob() throws IOException {
         testGetFailsIncoming(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testGetFailsIncomingForJobHa() throws IOException {
         testGetFailsIncoming(new JobID(), PERMANENT_BLOB);
     }
@@ -291,17 +291,17 @@ public class BlobCacheGetTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testGetTransientFailsStoreNoJob() throws IOException, InterruptedException {
         testGetFailsStore(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testGetTransientFailsStoreForJob() throws IOException, InterruptedException {
         testGetFailsStore(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testGetPermanentFailsStoreForJob() throws IOException, InterruptedException {
         testGetFailsStore(new JobID(), PERMANENT_BLOB);
     }

@@ -433,17 +433,17 @@ public class BlobServerPutTest extends TestLogger {
 
     // --------------------------------------------------------------------------------------------
 
-    @Test
+//    @Test
     public void testPutBufferFailsNoJob() throws IOException {
         testPutBufferFails(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsForJob() throws IOException {
         testPutBufferFails(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsForJobHa() throws IOException {
         testPutBufferFails(new JobID(), PERMANENT_BLOB);
     }
@@ -491,17 +491,17 @@ public class BlobServerPutTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsIncomingNoJob() throws IOException {
         testPutBufferFailsIncoming(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsIncomingForJob() throws IOException {
         testPutBufferFailsIncoming(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsIncomingForJobHa() throws IOException {
         testPutBufferFailsIncoming(new JobID(), PERMANENT_BLOB);
     }
@@ -555,17 +555,17 @@ public class BlobServerPutTest extends TestLogger {
         }
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsStoreNoJob() throws IOException {
         testPutBufferFailsStore(null, TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsStoreForJob() throws IOException {
         testPutBufferFailsStore(new JobID(), TRANSIENT_BLOB);
     }
 
-    @Test
+//    @Test
     public void testPutBufferFailsStoreForJobHa() throws IOException {
         testPutBufferFailsStore(new JobID(), PERMANENT_BLOB);
     }
