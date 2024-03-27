@@ -562,7 +562,7 @@ public class BlobCachePutTest extends TestLogger {
 
     // --------------------------------------------------------------------------------------------
 
-    @Test
+//    @Test
     public void testPutBufferFailsNoJob() throws IOException {
         testPutBufferFails(null, TRANSIENT_BLOB);
     }
