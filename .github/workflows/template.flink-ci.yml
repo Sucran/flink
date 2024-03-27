@@ -72,7 +72,7 @@ jobs:
     name: "Compile"
     runs-on: ubuntu-22.04
     container:
-      image: mapohl/flink-ci:FLINK-34194
+      image: chesnay/flink-ci:java_8_11_17
       # --init makes the process in the container being started as an init process which will clean up any daemon processes during shutdown
       # --privileged allows writing coredumps in docker (FLINK-16973)
       options: --init --privileged
@@ -133,7 +133,7 @@ jobs:
     needs: compile
     runs-on: ubuntu-22.04
     container:
-      image: mapohl/flink-ci:FLINK-34194
+      image: chesnay/flink-ci:java_8_11_17
       # --init makes the process in the container being started as an init process which will clean up any daemon processes during shutdown
       # --privileged allows writing coredumps in docker (FLINK-16973)
       options: --init --privileged
@@ -173,7 +173,7 @@ jobs:
     needs: compile
     runs-on: ubuntu-22.04
     container:
-      image: mapohl/flink-ci:FLINK-34194
+      image: chesnay/flink-ci:java_8_11_17
       # --init makes the process in the container being started as an init process which will clean up any daemon processes during shutdown
       # --privileged allows writing coredumps in docker (FLINK-16973)
       options: --init --privileged
@@ -279,7 +279,7 @@ jobs:
     name: "E2E (group ${{ matrix.group }})"
     needs: compile
     # the end to end tests are not executed in Flink's CI Docker container due to problems when running Docker-in-Docker
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     timeout-minutes: 310
     env:
       # timeout in minutes - this environment variable is required by uploading_watchdog.sh
