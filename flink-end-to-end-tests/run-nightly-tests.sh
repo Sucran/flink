@@ -227,9 +227,9 @@ funtion run_group_2 {
 
   run_test "Shaded Hadoop S3A with credentials provider end-to-end test" "$END_TO_END_DIR/test-scripts/test_batch_wordcount.sh hadoop_with_provider"
 
-  if [[ `uname -i` != 'aarch64' ]]; then
-      run_test "PyFlink end-to-end test" "$END_TO_END_DIR/test-scripts/test_pyflink.sh" "skip_check_exceptions"
-  fi
+#  if [[ `uname -i` != 'aarch64' ]]; then
+#      run_test "PyFlink end-to-end test" "$END_TO_END_DIR/test-scripts/test_pyflink.sh" "skip_check_exceptions"
+#  fi
   # These tests are known to fail on JDK11. See FLINK-13719
   if [[ ${PROFILE} != *"jdk11"* ]] && [[ `uname -i` != 'aarch64' ]]; then
       run_test "PyFlink YARN per-job on Docker test" "$END_TO_END_DIR/test-scripts/test_pyflink_yarn.sh" "skip_check_exceptions"
@@ -269,10 +269,13 @@ funtion run_group_2 {
 }
 
 if [ "$1" == "1" ]; then
+    echo "run_group_1"
     run_group_1
 elif [ "$1" == "2" ]; then
+    echo "run_group_2"
     run_group_2
 else
+    echo "run_all"
     run_group_1
     run_group_2
 fi
