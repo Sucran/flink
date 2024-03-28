@@ -171,7 +171,7 @@ function run_group_1 {
   run_test "Running HA per-job cluster (rocks, incremental) end-to-end test" "$END_TO_END_DIR/test-scripts/test_ha_per_job_cluster_datastream.sh rocks true true 3.5" "skip_check_exceptions"
 }
 
-funtion run_group_2 {
+function run_group_2 {
   ################################################################################
   # Miscellaneous
   ################################################################################
