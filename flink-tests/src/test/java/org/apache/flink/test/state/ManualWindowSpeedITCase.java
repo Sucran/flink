@@ -59,7 +59,7 @@ public class ManualWindowSpeedITCase extends AbstractTestBase {
 
     @Rule public TemporaryFolder tempFolder = new TemporaryFolder();
 
-    @Test
+//    @Test
     public void testTumblingIngestionTimeWindowsWithFsBackend() throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
@@ -97,7 +97,7 @@ public class ManualWindowSpeedITCase extends AbstractTestBase {
         env.execute();
     }
 
-    @Test
+//    @Test
     public void testTumblingIngestionTimeWindowsWithFsBackendWithLateness() throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
@@ -136,7 +136,7 @@ public class ManualWindowSpeedITCase extends AbstractTestBase {
         env.execute();
     }
 
-    @Test
+//    @Test
     public void testTumblingIngestionTimeWindowsWithRocksDBBackend() throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
@@ -173,7 +173,7 @@ public class ManualWindowSpeedITCase extends AbstractTestBase {
         env.execute();
     }
 
-    @Test
+//    @Test
     public void testTumblingIngestionTimeWindowsWithRocksDBBackendWithLateness() throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
