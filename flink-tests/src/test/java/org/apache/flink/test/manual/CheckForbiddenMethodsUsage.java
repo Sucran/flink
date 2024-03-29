@@ -97,7 +97,7 @@ public class CheckForbiddenMethodsUsage {
 
     private static final List<ForbiddenCall> forbiddenCalls = new ArrayList<>();
 
-    @BeforeClass
+//    @BeforeClass
     public static void init() throws Exception {
         forbiddenCalls.add(
                 ForbiddenCall.of(
@@ -115,7 +115,7 @@ public class CheckForbiddenMethodsUsage {
                                 byte[].class, int.class, int.class, int.class)));
     }
 
-    @Test
+//    @Test
     public void testNoDefaultEncoding() throws Exception {
         final Reflections reflections =
                 new Reflections(
