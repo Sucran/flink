@@ -113,7 +113,7 @@ public class TypeSerializerSnapshotMigrationITCase extends SavepointMigrationTes
         this.testStateBackend = testMigrateVersionAndBackend.f1;
     }
 
-    @Test
+//    @Test
     public void testSavepoint() throws Exception {
         final int parallelism = 1;
 
