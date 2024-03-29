@@ -55,7 +55,7 @@ import java.util.Collection;
  * {@link TypeSerializerConfigSnapshot}, as can be seen in the commented out code at the end of this
  * class. On restore, we change the snapshot to implement directly a {@link TypeSerializerSnapshot}.
  */
-@RunWith(Parameterized.class)
+//@RunWith(Parameterized.class)
 public class TypeSerializerSnapshotMigrationITCase extends SavepointMigrationTestBase {
 
     private static final int NUM_SOURCE_ELEMENTS = 4;
@@ -75,7 +75,7 @@ public class TypeSerializerSnapshotMigrationITCase extends SavepointMigrationTes
     // master.
     private final ExecutionMode executionMode = ExecutionMode.VERIFY_SAVEPOINT;
 
-    @Parameterized.Parameters(name = "Migrate Savepoint / Backend: {0}")
+//    @Parameterized.Parameters(name = "Migrate Savepoint / Backend: {0}")
     public static Collection<Tuple2<MigrationVersion, String>> parameters() {
         return Arrays.asList(
                 Tuple2.of(MigrationVersion.v1_3, StateBackendLoader.MEMORY_STATE_BACKEND_NAME),

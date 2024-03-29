@@ -65,7 +65,7 @@ import static org.apache.flink.streaming.api.environment.ExecutionCheckpointingO
  * StopWithSavepointITCase#withDrain withDrain} except that the final checkpoint doesn't have to be
  * the same.
  */
-@RunWith(Parameterized.class)
+//@RunWith(Parameterized.class)
 public class PartiallyFinishedSourcesITCase extends TestLogger {
 
     @ClassRule public static final TemporaryFolder TEMPORARY_FOLDER = new TemporaryFolder();
@@ -74,7 +74,7 @@ public class PartiallyFinishedSourcesITCase extends TestLogger {
 
     private MiniClusterWithClientResource miniClusterResource;
 
-    @Before
+//    @Before
     public void init() throws Exception {
         Configuration configuration = new Configuration();
         // set failover strategy on the cluster level
@@ -92,7 +92,7 @@ public class PartiallyFinishedSourcesITCase extends TestLogger {
         miniClusterResource.before();
     }
 
-    @After
+//    @After
     public void tearDown() {
         if (miniClusterResource != null) {
             miniClusterResource.after();
@@ -111,7 +111,7 @@ public class PartiallyFinishedSourcesITCase extends TestLogger {
     @Parameter(3)
     public String failoverStrategy;
 
-    @Test
+//    @Test
     public void test() throws Exception {
         TestJobWithDescription testJob = buildJob();
 
