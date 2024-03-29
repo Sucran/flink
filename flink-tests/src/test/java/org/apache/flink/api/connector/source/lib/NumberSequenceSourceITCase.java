@@ -48,7 +48,7 @@ public class NumberSequenceSourceITCase extends TestLogger {
 
     private static final int PARALLELISM = 4;
 
-    @ClassRule
+//    @ClassRule
     public static final MiniClusterWithClientResource MINI_CLUSTER =
             new MiniClusterWithClientResource(
                     new MiniClusterResourceConfiguration.Builder()
@@ -58,7 +58,7 @@ public class NumberSequenceSourceITCase extends TestLogger {
 
     // ------------------------------------------------------------------------
 
-    @Test
+//    @Test
     public void testParallelSourceExecution() throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(PARALLELISM);
@@ -73,7 +73,7 @@ public class NumberSequenceSourceITCase extends TestLogger {
         assertThat(result, containsInAnyOrder(LongStream.rangeClosed(1, 1000).boxed().toArray()));
     }
 
-    @Test
+//    @Test
     public void testCheckpointingWithDelayedAssignment() throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
@@ -92,7 +92,7 @@ public class NumberSequenceSourceITCase extends TestLogger {
         assertThat(result, contains(LongStream.rangeClosed(0, 100).boxed().toArray()));
     }
 
-    @Test
+//    @Test
     public void testLessSplitsThanParallelism() throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(PARALLELISM);

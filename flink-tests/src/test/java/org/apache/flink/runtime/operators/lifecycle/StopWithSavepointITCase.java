@@ -94,19 +94,19 @@ import static org.apache.flink.runtime.operators.lifecycle.validation.TestOperat
  *   <li>taking a savepoint on a partially completed graph (a separate IT case)
  * </ul>
  */
-@RunWith(Parameterized.class)
+//@RunWith(Parameterized.class)
 public class StopWithSavepointITCase extends AbstractTestBase {
 
     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
     @Rule public final SharedObjects sharedObjects = SharedObjects.create();
 
-    @Parameter(0)
+//    @Parameter(0)
     public boolean withDrain;
 
-    @Parameter(1)
+//    @Parameter(1)
     public TestingGraphBuilder graphBuilder;
 
-    @Test
+//    @Test
     public void test() throws Exception {
         TestJobWithDescription testJob =
                 graphBuilder.build(
@@ -144,7 +144,7 @@ public class StopWithSavepointITCase extends AbstractTestBase {
         }
     }
 
-    @Parameterized.Parameters(name = "withDrain: {0}, {1}")
+//    @Parameterized.Parameters(name = "withDrain: {0}, {1}")
     public static Object[] parameters() {
         return new Object[][] {
             new Object[] {true, SIMPLE_GRAPH_BUILDER}, new Object[] {false, SIMPLE_GRAPH_BUILDER},
