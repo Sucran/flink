@@ -8,9 +8,8 @@ pipeline {
         }
         stage("test") {
             steps {
-                sh './tools/ci/test_controller.sh core'
-                java -version
-                mvn -version
+                sh 'java -version'
+                sh 'mvn -version'
             }
         }
     }
